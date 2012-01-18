@@ -1,0 +1,9 @@
+*.~
+*.gz
+*.bz2
+*.xz
+*.tgz
+*.tbz
+*.tar
+*/pkg
+*/src
