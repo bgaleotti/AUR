@@ -1,0 +1,16 @@
+# Mantainer: Bruno Galeotti <bgaleotti at gmail dot com>
+pkgname=composer-php
+pkgver=21ab41f
+pkgrel=1
+pkgdesc="Composer is a package manager tracking local dependencies of your projects and libraries."
+url="http://getcomposer.org"
+license="MIT"
+arch=("i686" "x86_64")
+depends=("php")
+source=("http://getcomposer.org/composer.phar")
+md5sums=("c4414683f0a8c126091638494307f2ff")
+
+package() {
+  install -d ${pkgdir}/usr/bin || return 1
+  install -D -m 755 $srcdir/composer.phar $pkgdir/usr/bin/composer.phar || return 1
+}
